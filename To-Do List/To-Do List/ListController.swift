@@ -29,7 +29,7 @@ class ListController: UITableViewController {
         
         for key in arrayOfKeys {
             let timeDifference = NSDate().timeIntervalSinceDate(dictionaryOfElementsAndDates[key]!);
-            if (timeDifference > 5 && dictionaryOfElementsAndChecks[key]!) {
+            if (timeDifference > 86400 && dictionaryOfElementsAndChecks[key]!) {
                 dictionaryOfElementsAndChecks.removeValueForKey(key)
                 dictionaryOfElementsAndDates.removeValueForKey(key)
                 self.tableView.reloadData()
