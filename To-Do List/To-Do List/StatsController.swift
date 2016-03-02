@@ -21,6 +21,9 @@ class StatsController: UIViewController {
         topLabel.text = "YOU COMPLETED"
         numberLabel.text = String(numberOfCompletedStuff)
         bottomLabel.text = "IN THE LAST 24 HOURS"
+        topLabel.font = UIFont (name: "AvenirNextCondensed-Bold", size: 30)
+        numberLabel.font = UIFont (name: "AvenirNextCondensed-Bold", size: 30)
+        bottomLabel.font = UIFont (name: "AvenirNextCondensed-Bold", size: 30)
     }
     
     override func didReceiveMemoryWarning() {

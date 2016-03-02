@@ -29,7 +29,7 @@ class ListController: UITableViewController {
         
         for key in arrayOfKeys {
             let timeDifference = NSDate().timeIntervalSinceDate(dictionaryOfElementsAndDates[key]!);
-            if (timeDifference > 86400 && dictionaryOfElementsAndChecks[key]!) {
+            if (timeDifference > 5 && dictionaryOfElementsAndChecks[key]!) {
                 dictionaryOfElementsAndChecks.removeValueForKey(key)
                 dictionaryOfElementsAndDates.removeValueForKey(key)
                 self.tableView.reloadData()
@@ -56,6 +56,7 @@ class ListController: UITableViewController {
 
         let cell = tableView.dequeueReusableCellWithIdentifier("stuff", forIndexPath: indexPath)
         cell.textLabel!.text = keys[indexPath.row]
+        cell.textLabel!.font = UIFont(name:"AvenirNextCondensed-Medium", size: 18)
         
         if (dictionaryOfElementsAndChecks[keys[indexPath.row]] == false) {
             
